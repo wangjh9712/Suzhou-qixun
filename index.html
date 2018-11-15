@@ -2,13 +2,21 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<meta name="viewport" content="user-scalable=no">
+	<!-- jquery -->
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- bootstrap -->
 	<script src="js/bootstrap.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<title>苏城企业培训网</title>
 </head>
 
 <body>
-
+	<!-- DOM -->
+	<nav></nav>
+	<!-- load HTML -->
+	<script>
+		$("nav").load("component/nav.html");
+	</script>
 </body>
 </html>
