@@ -31,5 +31,76 @@
 		</div>
 	</nav>
 	<!-- navigator end -->
+	<!-- Carousel -->
+	<div class="container-fluid">
+	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <ol class="carousel-indicators">
+		  <li id="slide-one" date-target="#myCarousel" date-slide-to="0" class="active"></li>
+		  <li id="slide-two" date-target="#myCarousel" date-slide-to="1"></li>
+		  <li id="slide-three" date-target="#myCarousel" date-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+		    <div class="item active" style="background:#243442;">
+				<img src="img/slide1.png" alt="第一张" class="img-responsive center-block">
+			</div>
+			<div class="item" style="background:#F5E5DD;">
+				<img src="img/slide2.png" alt="第二张" class="img-responsive center-block">
+			</div>
+			<div class="item" style="background:#DC292C;">
+				<img src="img/slide3.png" alt="第三张" class="img-responsive center-block">
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	   </div>
+	</div>
+	<script type="text/javascript">
+		$('#myCarousel').carousel({
+			interval:3000,			
+		});
+        $("#slide-one").click(function(){
+            $("#myCarousel").carousel(0);
+        });
+        $("#slide-two").click(function(){
+            $("#myCarousel").carousel(1);
+        });
+        $("#slide-three").click(function(){
+            $("#myCarousel").carousel(2);
+        });
+	</script>
+    <!-- Carousel end-->
+	<!-- media -->
+	<div class="tab2">
+		<div class="container">
+			<div class="row">
+			<div class="text col-md-6 col-sm-6 tab2-text" style="margin-top: 90px;">
+					<h3>强大的学习体系</h3>
+					<p>经过管理学大师层层把关、让您的企业突飞猛进。</p>
+				</div>
+				<div class="col-md-6 col-sm-6 tab2-img">
+					<img src="img/tab2.png" alt="" class="auto img-responsive center-block">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tab3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<img src="img/tab3.png" alt="" class="auto img-responsive center-block">
+				</div>
+				<div class="text col-md-6 col-sm-6">
+					<h3>完美的管理方式</h3>
+					<p>最新的管理培训方案，让您的企业赶超同行。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- media end -->
+	
 </body>
 </html>
