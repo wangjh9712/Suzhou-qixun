@@ -9,7 +9,57 @@
 </head>
 
 <body>
-	<!--轮播开始-->
+	<!-- navigator -->
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header navbar-left">
+				<button type="buttom" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">石家庄电子商务网</a>
+			</div>
+			<div class="collapse navbar-collapse navbar-right" id="navi">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+					<li><a href="news.html"><span class="glyphicon glyphicon-list"></span> 资讯</a></li>
+					<li><a href="cases.html"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
+					<li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> 关于</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- navigator end -->
+	<!-- media -->
+	<div class="tab2">
+		<div class="container">
+			<div class="row">
+			<div class="text col-md-6 col-sm-6 tab2-text" style="margin-top: 90px;">
+					<h3>强大的学习体系</h3>
+					<p>经过管理学大师层层把关、让您的企业突飞猛进。</p>
+				</div>
+				<div class="col-md-6 col-sm-6 tab2-img">
+					<img src="img/tab2.png" alt="" class="auto img-responsive center-block">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tab3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<img src="img/tab3.png" alt="" class="auto img-responsive center-block">
+				</div>
+				<div class="text col-md-6 col-sm-6">
+					<h3>完美的管理方式</h3>
+					<p>最新的管理培训方案，让您的企业赶超同行。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- media end -->
+	<!-- Carousel -->
 	<div class="container-fluid">
 	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	    <ol class="carousel-indicators">
@@ -50,6 +100,6 @@
             $("#myCarousel").carousel(2);
         });
 	</script>
-    <!--轮播结束-->
+    <!-- Carousel end-->
 </body>
 </html>
