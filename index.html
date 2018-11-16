@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -9,6 +10,70 @@
 </head>
 
 <body>
+	<!-- navigator -->
+	<nav class="navbar navbar-default navbar-static-top" style="margin: 0;">
+		<div class="container">
+			<div class="navbar-header navbar-left">
+				<button type="buttom" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">石家庄电子商务网</a>
+			</div>
+			<div class="collapse navbar-collapse navbar-right" id="navi">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+					<li><a href="news.html"><span class="glyphicon glyphicon-list"></span> 资讯</a></li>
+					<li><a href="cases.html"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
+					<li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> 关于</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- navigator end -->
+	<!-- Carousel -->
+	<div class="container-fluid" style="padding: 0;">
+	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <ol class="carousel-indicators">
+		  <li id="slide-one" date-target="#myCarousel" date-slide-to="0" class="active"></li>
+		  <li id="slide-two" date-target="#myCarousel" date-slide-to="1"></li>
+		  <li id="slide-three" date-target="#myCarousel" date-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+		    <div class="item active" style="background:#243442;">
+				<img src="img/slide1.png" alt="第一张" class="img-responsive center-block">
+			</div>
+			<div class="item" style="background:#F5E5DD;">
+				<img src="img/slide2.png" alt="第二张" class="img-responsive center-block">
+			</div>
+			<div class="item" style="background:#DC292C;">
+				<img src="img/slide3.png" alt="第三张" class="img-responsive center-block">
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	   </div>
+	</div>
+	<script type="text/javascript">
+		$('#myCarousel').carousel({
+			interval:3000,			
+		});
+        $("#slide-one").click(function(){
+            $("#myCarousel").carousel(0);
+        });
+        $("#slide-two").click(function(){
+            $("#myCarousel").carousel(1);
+        });
+        $("#slide-three").click(function(){
+            $("#myCarousel").carousel(2);
+        });
+	</script>
+    <!-- Carousel end-->
 	<!-- Tab1 -->
 	<div class="container">
 		<div class="row">
@@ -87,5 +152,42 @@
 		</div>
 	</div>
 	<!-- Tab1 end -->
+	<!-- media -->
+	<div class="tab2" style="background-color:#F2F2F2" align="center">
+    <div class="container">
+        <div class="row" style="padding:60px;">
+		 <div class="col-md-6 col-md-push-6 col-sm-6">
+                <img src="img/tab2.png" alt="" class="auto img-responsive center-block" style="width:40%; height:40%;">
+            </div>
+		<div class="col-md-6 col-sm-6 col-md-pull-6" style="margin-top: 90px;">
+		
+                <h3>强大的学习体系</h3>
+                <p>经过管理学大师层层把关、让您的企业突飞猛进。</p>
+            </div>	
+        </div>
+    </div>
+</div>
+	<div class="tab3" align="center">
+	<div class="container">
+	<div class="row" style="padding:60px;">
+	
+			<div class="col-md-6 col-sm-6" style="margin-top:10px;">
+				<img src="img/tab3.png" alt="" class="auto img-responsive center-block" style="width:80%; height:80%">
+			</div>
+		<div class="text col-md-6 col-sm-6" style="margin-top:90px;">
+				<h3>完美的管理方式</h3>
+				<p>最新的管理培训方案，让您的企业赶超同行。</p>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- media end -->
+	
+	<!-- footer -->
+	<footer class="container-fluid" style="padding: 20px;text-align: center;background-color: #666;color: #ccc;">
+		<p>企业培训 | 合作事宜 | 版权投诉</p>
+		<p>苏ICP备12345678. © 2009-2016 瓢城企训网. Powered by Bootstrap.</p>
+	</footer>
+	<!-- footer end -->
 </body>
 </html>
