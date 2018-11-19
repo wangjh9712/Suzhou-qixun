@@ -34,37 +34,35 @@
 	<!-- navigator end -->
 	<!-- Carousel -->
 	<div class="container-fluid" style="padding: 0; margin-top: 50px;">
-	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-	    <ol class="carousel-indicators">
-		  <li id="slide-one" date-target="#myCarousel" date-slide-to="0" class="active"></li>
-		  <li id="slide-two" date-target="#myCarousel" date-slide-to="1"></li>
-		  <li id="slide-three" date-target="#myCarousel" date-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-		    <div class="item active" style="background:#243442;">
-				<img src="img/slide1.png" alt="第一张" class="img-responsive center-block">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+			  <li id="slide-one" date-target="#myCarousel" date-slide-to="0" class="active"></li>
+			  <li id="slide-two" date-target="#myCarousel" date-slide-to="1"></li>
+			  <li id="slide-three" date-target="#myCarousel" date-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active" style="background:#243442;">
+					<img src="img/slide1.png" alt="第一张" class="img-responsive center-block">
+				</div>
+				<div class="item" style="background:#F5E5DD;">
+					<img src="img/slide2.png" alt="第二张" class="img-responsive center-block">
+				</div>
+				<div class="item" style="background:#DC292C;">
+					<img src="img/slide3.png" alt="第三张" class="img-responsive center-block">
+				</div>
 			</div>
-			<div class="item" style="background:#F5E5DD;">
-				<img src="img/slide2.png" alt="第二张" class="img-responsive center-block">
-			</div>
-			<div class="item" style="background:#DC292C;">
-				<img src="img/slide3.png" alt="第三张" class="img-responsive center-block">
-			</div>
-		</div>
-		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
 	   </div>
-	   
 	</div>
 	<script type="text/javascript">
 		$('#myCarousel').carousel({
 			interval:4000,
 			pause:"no",
-
 		});
         $("#slide-one").click(function(){
             $("#myCarousel").carousel(0);
@@ -155,34 +153,48 @@
 		</div>
 	</div>
 	<!-- Tab1 end -->
-	<!-- media -->
-	<div style="background-color:#F2F2F2" align="center">
-	    <div class="container" style="padding:60px;">
-	        <div class="row" style="margin: 0 -15px;">
-			 	<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-6 col-md-push-6 col-lg-6 col-lg-push-6" style="margin-top: 90px;">
-	                <img src="img/tab2.png" class="auto img-responsive center-block" style="width:40%; height:40%;" >
+	<!-- Tab2 Tab3 -->
+	<div style="background-color: #eee; padding: 60px 20px; text-align: center; margin: 30px 0;color: #666;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-6 col-md-push-6 col-lg-6 col-lg-push-6">
+	                <img src="img/tab2.png" class="tabimg img-responsive center-block" style="width:40%; height:40%;vertical-align: middle;" >
 	            </div>
-				<div class="col-xs-12 col-sm-6 col-sm-pull-6 col-md-6 col-md-pull-6 col-lg-6 col-lg-pull-6" style="margin-top: 90px;">
+				<div class="tabtxt col-xs-12 col-sm-6 col-sm-pull-6 col-md-6 col-md-pull-6 col-lg-6 col-lg-pull-6 text-center" style="margin-top: 0px; height:20px; ">
 	                <h3>强大的学习体系</h3>
 	                <p>经过管理学大师层层把关、让您的企业突飞猛进。</p>
 	            </div>	
-	        </div>
-	    </div>
+			</div>
+		</div>	
 	</div>
-	<div align="center">
+	<div style="padding:60px 20px;text-align: center; margin: 30px 0;color: #666;">
 		<div class="container">
-			<div class="row" style="padding:60px;">
-				<div class="col-xs-12 col-md-6 col-sm-6 col-lg-6" style="padding-top:inherit">
-					<img src="img/tab3.png" alt class="auto img-responsive center-block" style="width: 65%; height: 65%;">
+			<div class="row">
+				<div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+					<img src="img/tab3.png" class="tabimg img-responsive center-block" style="width: 65%; height: 65%;vertical-align: middle;">
 				</div>
-				<div class="col-xs-12 col-md-6 col-sm-6 col-lg-6" style="padding-top:inherit">
+				<div class="tabtxt col-xs-12 col-md-6 col-sm-6 col-lg-6" style="margin-top: 0px;">
 					<h3>完美的管理方式</h3>
 					<p>最新的管理培训方案，让您的企业赶超同行。</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- media end -->
+	<script>
+	$(window).on('load',function(){
+		$('.tabtxt').eq(0).css('margin-top', ($('.tabimg').eq(0).height() - $('.tabtxt').eq(0).height()) / 2 + 'px');
+	});
+	$(window).on('resize',function(){
+		$('.tabtxt').eq(0).css('margin-top', ($('.tabimg').eq(0).height() - $('.tabtxt').eq(0).height()) / 2 + 'px');
+	});
+	$(window).on('load',function(){
+		$('.tabtxt').eq(1).css('margin-top', ($('.tabimg').eq(1).height() - $('.tabtxt').eq(1).height()) / 2 + 'px');
+	});
+	$(window).on('resize',function(){
+		$('.tabtxt').eq(1).css('margin-top', ($('.tabimg').eq(1).height() - $('.tabtxt').eq(1).height()) / 2 + 'px');
+	});
+	</script>
+	<!-- Tab2 Tab3 end -->
 	<!-- footer -->
 	<footer class="container-fluid" style="padding: 20px;text-align: center;background-color: #666;color: #ccc;">
 		<ol class="breadcrumb" style="background-color: #666; padding: 0px;">
