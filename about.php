@@ -43,26 +43,9 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>	
 	<title>科大企训网</title>
-	<nav class="navbar navbar-default navbar-fixed-top" style="margin: 0;">
-		<div class="container">
-			<div class="navbar-header navbar-left">
-				<button type="buttom" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<img class="navbar-brand" src="img/logo.png" alt="wzsw" style="padding:0px;">
-			</div>
-			<div class="collapse navbar-collapse navbar-right" id="navi">
-				<ul class="nav navbar-nav">
-					<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
-					<li><a href="news.html"><span class="glyphicon glyphicon-list"></span> 资讯</a></li>
-					<li><a href="cases.html"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
-					<li class="active"><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> 关于</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<!-- navi -->
+	<?php require 'component/navi.php'?>
+	<!-- navi end -->
 </head>
 <body data-spy="scroll" data-target="#myScrollspy">
 	<div class="container-fluid jumbotron" style="background-image: url(img/bg.jpg);margin: 50px 0 0 0;padding: 60px 0;">
@@ -112,15 +95,7 @@
 	<!-- navigator end -->
 	
 	<!-- footer -->
-	<footer class="container-fluid" style="padding: 20px;text-align: center;background-color: #666;color: #ccc;">
-		<ol class="breadcrumb" style="background-color: #666; color: #ccc; margin-bottom: 5px;">
-  			<li><a href="#" style="color: #ccc; text-decoration: none;">企业培训</a></li>
-  			<li><a href="#" style="color: #ccc; text-decoration: none;">合作事宜</a></li>
-  			<li><a href="#" style="color: #ccc; text-decoration: none;">版权投诉</a></li>
-		</ol>
-		<p>冀ICP备12345678-1. © 2009-2018 <a href="index.html" style="color: #ccc; text-decoration: none;">科大企训网</a>.</p>
-		<p>Powered by <a href="https://v3.bootcss.com/" style="color: #ccc; text-decoration: none;">Bootstrap</a>.</p>
-	</footer>
+	<?php require 'component/footer.php' ?>
 	<!-- footer end -->
 </body>
 </html>
