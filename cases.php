@@ -10,7 +10,8 @@
 
 <body style="background-color: #eee">
 	<!-- navigator -->
-	<?php require 'component/navi.php'?>
+	<?php require_once 'component/navi.php'?>
+	<?php require_once 'component/connect.php'?>
 	<!-- navigator end -->
 	<div class="container-fluid jumbotron" style="background-image: url(img/bg.jpg);margin: 50px 0 0 0;padding: 60px 0;">
 		<div class="container">
@@ -22,118 +23,25 @@
 	</div>
 	<div class="container" style="padding: 40px 0; text-align: center;">
 		<div class="row" style="padding: 15px;">
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case1.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国移动</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case2.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国石化</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case3.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国联通</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case4.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国电信</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case4.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国电信</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case3.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国联通</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case2.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国石化</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case1.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国移动</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case1.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国移动</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case2.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国石化</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case3.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国联通</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin: 0 0 20px 0;">
-				<div class="thumbnail">
-					<img src="img/case4.jpg">
-					<div class="caption">
-						<h4 class="text-center">中国电信</h4>
-						<p class="text-center">参与了本机构的总裁管理培训课程，学员反馈意见良好。</p>
-					</div>
-				</div>
-			</div>
+			<?php
+			$sql="SELECT * FROM cases";
+			$result=mysqli_query($conn,$sql);
+			while($row=mysqli_fetch_array($result)){
+				echo "<div class='col-lg-3 col-md-4 col-sm-6 col-xs-12' style='margin: 0 0 20px 0;'>";
+					echo "<div class='thumbnail'>";
+						echo "<img src='".$row['logo']."'>";
+						echo "<div class='caption'>";
+							echo "<h4 class='text-center'>".$row['name']."</h4>";
+							echo "<p class='text-center'>".$row['introduction']."</p>";
+						echo "</div>";
+					echo "</div>";
+				echo "</div>";
+				}
+			?>
 		</div>
 	</div>
 	<!-- footer -->
-	<?php require 'component/footer.php' ?>
+	<?php require_once 'component/footer.php' ?>
 	<!-- footer end -->
 </body>
 </html>

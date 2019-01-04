@@ -29,7 +29,8 @@
 
 <body style="background-color: #EAEAEA;">
 	<!-- navigator -->
-	<?php require 'component/navi.php'?>
+	<?php require_once 'component/navi.php'?>
+	<?php require_once 'component/connect.php'?>
 	<!-- navigator end -->
 	<div class="container-fluid jumbotron" style="background-image: url(img/bg.jpg);margin: 50px 0 0 0;padding: 60px 0;">
 		<div class="container">
@@ -44,136 +45,23 @@
 		<div class="row">
 			<div class="col-md-8 col-xs-12 col-sm-12 col-lg-8">
 				<div class="container-fluid">
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info1.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
-							<p class="hidden-xs">TVOS2.0是在TVOS1.0与华为MediaOS及阿里巴巴YunOS融合的基础上，打造的新一代智能电视操作系统。华为主要承担开发工作，内置的电视购物商城由阿里方面负责。</p>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info2.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>苹果四寸手机为何要配置强大的A9处理器？</h4>
-							<p class="hidden-xs">苹果明年初有可能对外发布一款经过升级的四英寸手机，相当于iPhone 5s。该手机将会配置苹果在2015年旗舰手机中采用的A9处理器。配置性能如此强大的应用处理器?</p>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info3.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>六家互联网公司发声明 抵制流量劫持等违法行为</h4>
-							<p class="hidden-xs">六家互联网公司（今日头条、美团大众点评网、360、腾讯、微博、小米科技）发布联合声明，呼吁有关运营商打击流量劫持，重视互联网公司被流量劫持，可能导致的严重后果。</p>
-							<p>admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info1.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
-							<p class="hidden-xs">TVOS2.0是在TVOS1.0与华为MediaOS及阿里巴巴YunOS融合的基础上，打造的新一代智能电视操作系统。华为主要承担开发工作，内置的电视购物商城由阿里方面负责。</p>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info2.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>苹果四寸手机为何要配置强大的A9处理器？</h4>
-							<p class="hidden-xs">苹果明年初有可能对外发布一款经过升级的四英寸手机，相当于iPhone 5s。该手机将会配置苹果在2015年旗舰手机中采用的A9处理器。配置性能如此强大的应用处理器?</p>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info3.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>六家互联网公司发声明 抵制流量劫持等违法行为</h4>
-							<p class="hidden-xs">六家互联网公司（今日头条、美团大众点评网、360、腾讯、微博、小米科技）发布联合声明，呼吁有关运营商打击流量劫持，重视互联网公司被流量劫持，可能导致的严重后果。</p>
-							<p>admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-			       <div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info1.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
-							<p class="hidden-xs">TVOS2.0是在TVOS1.0与华为MediaOS及阿里巴巴YunOS融合的基础上，打造的新一代智能电视操作系统。华为主要承担开发工作，内置的电视购物商城由阿里方面负责。</p>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info2.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>苹果四寸手机为何要配置强大的A9处理器？</h4>
-							<p class="hidden-xs">苹果明年初有可能对外发布一款经过升级的四英寸手机，相当于iPhone 5s。该手机将会配置苹果在2015年旗舰手机中采用的A9处理器。配置性能如此强大的应用处理器?</p>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info3.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>六家互联网公司发声明 抵制流量劫持等违法行为</h4>
-							<p class="hidden-xs">六家互联网公司（今日头条、美团大众点评网、360、腾讯、微博、小米科技）发布联合声明，呼吁有关运营商打击流量劫持，重视互联网公司被流量劫持，可能导致的严重后果。</p>
-							<p>admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-				<div class="row" style="background-color: #fff;box-shadow: 2px 2px 3px #ccc;margin: 0 0 20px 0;">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info1.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
-							<p class="hidden-xs" style="color: #666;">TVOS2.0是在TVOS1.0与华为MediaOS及阿里巴巴YunOS融合的基础上，打造的新一代智能电视操作系统。华为主要承担开发工作，内置的电视购物商城由阿里方面负责。</p>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-				<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info1.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>广电总局发布TVOS2.0华为阿里参与研发</h4>
-							<p class="hidden-xs">TVOS2.0是在TVOS1.0与华为MediaOS及阿里巴巴YunOS融合的基础上，打造的新一代智能电视操作系统。华为主要承担开发工作，内置的电视购物商城由阿里方面负责。</p>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info2.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>苹果四寸手机为何要配置强大的A9处理器？</h4>
-							<p class="hidden-xs">苹果明年初有可能对外发布一款经过升级的四英寸手机，相当于iPhone 5s。该手机将会配置苹果在2015年旗舰手机中采用的A9处理器。配置性能如此强大的应用处理器?</p>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row info-content">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-							<img src="img/info3.jpg" class="img-responsive" style="margin: 12px 0">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h4>六家互联网公司发声明 抵制流量劫持等违法行为</h4>
-							<p class="hidden-xs">六家互联网公司（今日头条、美团大众点评网、360、腾讯、微博、小米科技）发布联合声明，呼吁有关运营商打击流量劫持，重视互联网公司被流量劫持，可能导致的严重后果。</p>
-							<p>admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
+					<?php
+					$sql = 'SELECT * FROM news';
+					$result = mysqli_query($conn,$sql);
+					  	while($row = mysqli_fetch_array($result)){
+					  		if($row['hot'] == 'no')
+					  	  		echo "<div class='row info-content'>
+										<div class='col-lg-5 col-md-5 col-sm-5 col-xs-5'>
+											<img src=".$row['image']." class='img-responsive' style='margin: 12px 0'>
+										</div>
+										<div class='col-lg-7 col-md-7 col-sm-7 col-xs-7'>
+											<h4>".$row['title']."</h4>
+											<p class='hidden-xs'>".$row['content']."</p>
+											<p style='color: #666;'>admin".$row['date']."</p>
+										</div>
+									  </div>";
+					  }
+					?>
 				</div>
 			</div>
 			<div class="col-md-4 hidden-xs hidden-sm col-lg-4" style="background-color: #fff;box-shadow: 2px 2px 3px #ccc;">
@@ -181,78 +69,21 @@
 					<h2 style="font-size: 20px; padding: 5px">热门资讯</h2>
 				</blockquote>
 				<div class="container-fluid">
-					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0; padding: 0;">
-							<img src="img/info3.jpg" class="img-responsive">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h5 class="hidden-xs">六家互联网公司发声明 抵制流量劫持等违法行为</h5>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-					</div>
-					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0; padding: 0;">
-							<img src="img/info1.jpg" class="img-responsive">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h5 class="hidden-xs">广电总局发布TVOS2.0华为阿里参与研发</h5>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0; padding: 0;">
-							<img src="img/info2.jpg" class="img-responsive">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h5 class="hidden-xs">苹果四寸手机为何要配置强大的A9处理器？</h5>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0; padding: 0;">
-							<img src="img/info3.jpg" class="img-responsive">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h5 class="hidden-xs">六家互联网公司发声明 抵制流量劫持等违法行为</h5>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-					</div>
-					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0; padding: 0;">
-							<img src="img/info1.jpg" class="img-responsive">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h5 class="hidden-xs">广电总局发布TVOS2.0华为阿里参与研发</h5>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0; padding: 0;">
-							<img src="img/info2.jpg" class="img-responsive">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h5 class="hidden-xs">苹果四寸手机为何要配置强大的A9处理器？</h5>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
-					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0; padding: 0;">
-							<img src="img/info3.jpg" class="img-responsive">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h5 class="hidden-xs">六家互联网公司发声明 抵制流量劫持等违法行为</h5>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-					</div>
-					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin: 12px 0; padding: 0;">
-							<img src="img/info1.jpg" class="img-responsive">
-						</div>
-					    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-							<h5 class="hidden-xs">广电总局发布TVOS2.0华为阿里参与研发</h5>
-							<p style="color: #666;">admin 15 / 10 / 11</p>
-					    </div>
-				    </div>
+					<?php
+					$result = mysqli_query($conn,$sql);
+					while($row=mysqli_fetch_array($result)){
+							if($row["hot"]=='yes')
+							echo "<div class='row'>
+									<div class='col-lg-5 col-md-5 col-sm-5 col-xs-5' style='margin: 12px 0; padding: 0;'>
+										<img src=".$row['image']." class='img-responsive'>
+									</div>
+									<div class='col-lg-7 col-md-7 col-sm-7 col-xs-7'>
+										<h5 class='hidden-xs'>".$row['title']."</h5>
+										<p style='color: #666;'>admin".$row['date']."</p>
+									</div>
+								</div>";	
+					}
+					?>
 				</div>
 			</div>
 		</div>
@@ -260,7 +91,7 @@
 	
 	<!--content end-->
 	<!-- footer -->
-	<?php require 'component/footer.php' ?>
+	<?php require_once 'component/footer.php' ?>
 	<!-- footer end -->
 </body>
 </html>

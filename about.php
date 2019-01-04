@@ -44,7 +44,8 @@
 	<script src="js/bootstrap.min.js"></script>	
 	<title>科大企训网</title>
 	<!-- navi -->
-	<?php require 'component/navi.php'?>
+	<?php require_once 'component/navi.php'?>
+	<?php require_once 'component/connect.php'?>
 	<!-- navi end -->
 </head>
 <body data-spy="scroll" data-target="#myScrollspy">
@@ -61,31 +62,30 @@
 			<div class="row">
 				<div class="col-lg-2 col-md-2 hidden-sm hidden-xs" id="myScrollspy">
 					<ul class="nav nav-tabs nav-stacked list-group" data-spy="affix" data-offset-top="210">
-						<li class="active"><a class="list-group-item" href="#1">1.机构简介</a></li>
-						<li><a class="list-group-item" href="#2">2.加入我们</a></li>
-						<li><a class="list-group-item" href="#3">3.联系方式</a></li>
+						<?php
+						if ($result = mysqli_query($conn, 'SELECT title FROM about')){
+							$i=1;
+							while($row=mysqli_fetch_assoc($result)){
+							echo "<li><a class='list-group-item' href='#$i'>".$row['title']."</a></li>";
+							$i++;
+							}
+						}
+						?>
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10" style="background-color:#FFFFFF; box-shadow: 2px 2px 3px #ccc;">
-					<h3 id="1" style="font-size:19px; margin: 0 0 10px 0; padding: 20px 0 0px 0;">机构简介</h3><hr/>
 					<p style="font-size:16px; font-family:'Microsoft YaHei UI'; line-height:30px">
-						&emsp;&emsp;科企训有限公司是一家专业以智能化弱电工程为主的高科技民营企业，公司自创立以来一直专业致力于智能化弱电工程；始终坚持发扬"诚信、创新、沟通"为企业宗旨，以"技术、服务"为立业之本的团体精神，并形成一套完整的设计、安装、调试、培训、维护一站式服务体系。<br><br>
-						&emsp;&emsp;Hkust enterprise training co., ltd. is a high-tech private enterprise specializing in intelligent weak current engineering. Since its establishment, the company has been specialized in intelligent weak current engineering. We always adhere to the corporate tenet of "integrity, innovation and communication" and the group spirit of "technology and service", and form a complete set of one-stop service system of design, installation, debugging, training and maintenance.</p>
-					<h3 id="2" style="font-size:19px; margin: 0 0 10px 0; padding: 20px 0 0px 0;">加入我们</h3><hr/>
-					<p style="font-size:16px; font-family:'Microsoft YaHei UI'; line-height:30px">
-						&emsp;&emsp;网络已深刻改变着人们的生活，本地化生活服务市场前景巨大，生活半径团队坚信本地化生活服务与互联网的结合将会成就一家梦幻的公司，我们脚踏实地的相信梦想，我们相信你的加入会让生活半径更可能成为那家梦幻公司！生活半径人有梦想，有魄力，强执行力，但是要实现这个伟大的梦想，需要更多的有创业精神的你一路前行。公司将提供有竞争力的薪酬、完善的福利（五险一金）、期权、广阔的上升空间。只要你有能力、有激情、有梦想，愿意付出，愿意与公司共同成长，请加入我们！</p>
-					<p style="font-size:16px; font-family:'Microsoft YaHei UI'; letter-spacing:2px; line-height:30px">
-						&emsp;&emsp;请发送您的简历到：hr@xxx.com，我们会在第一时间联系您！</p>
-					<p style="font-size:16px; font-family:'Microsoft YaHei UI'; line-height:30px"><br>
-						&emsp;&emsp;The Internet has profoundly changed people's lives. The prospect of localized life service market is huge. The living radius team firmly believes that the combination of localized life service and Internet will make a dream company. Life radius people have dreams, drive and strong execution, but to achieve this great dream, you need more entrepreneurial along the way. The company will provide competitive compensation, complete benefits (five social insurance and one housing fund), options, and broad space for growth. As long as you have ability, passion, dream, willing to pay, willing to grow with the company, please join us.</p>
-					<p style="font-size:16px; font-family:'Microsoft YaHei UI'; letter-spacing:2px; line-height:30px">
-						&emsp;&emsp;Please send your resume to hr@xxx.com, we will contact you immediately!</p>				
-					<h3 id="3" style="font-size:19px; margin: 0 0 10px 0; padding: 20px 0 0px 0;">联系方式</h3><hr/>
-					<p style="font-size:16px; font-family:'Microsoft YaHei UI'; line-height:30px">地址：石家庄市裕华区裕祥街26号<br>
-					Address: 26 yuxiang street, yuhua district, shijiazhuang city</p>
-					<p style="font-size:16px; font-family:'Microsoft YaHei UI'; line-height:30px">邮编：050000<br>Postal Code: 050000</p>
-					<p style="font-size:16px; font-family:'Microsoft YaHei UI'; line-height:30px">电话：010-88888888<br>Telphone: 010-88888888</p>
-					<p style="font-size:16px; font-family:'Microsoft YaHei UI';- line-height:30px">传真：010-88666666<br>Fax: 010-883666666</p>
+						<?php
+						if ($result = mysqli_query($conn, 'SELECT content,title FROM about')){
+							$i=1;
+							while($row=mysqli_fetch_assoc($result)){						
+							echo "<h3 id='$i' style='font-size:24px; margin: 0 0 10px 0; padding: 20px 0 0px 0;'>".$row['title']."</h3><hr />";
+							echo "<p style='font-size:16px; font-family:Microsoft YaHei UI; line-height:30px'>".$row['content']."</p>";
+							$i++;
+							}
+						}
+						?>
+					</p>
 				</div>
 			</div>
 		</div>

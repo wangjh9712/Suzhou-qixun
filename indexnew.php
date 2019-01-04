@@ -18,38 +18,25 @@
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<?php
-				// $sql = 'SELECT * FROM myindex';
-				// $result = mysqli_query($conn,$sql);
-				// while($row=mysqli_fetch_array($result)){
-				// 	$li = '<li id="slide-'.$row['no'].'" date-target="#myCarousel" date-slide-to="'.$row['no'].'" class="active"></li>';
-				// 	echo $li;
-				// }
+				$sql = 'SELECT * FROM myindex';
+				$result = mysqli_query($conn,$sql);
+				while($row=mysqli_fetch_array($result)){
+					$li = '<li id="slide-'.$row['no'].'" class="active" date-target="#myCarousel" date-slide-to="'.$row['no'].'></li>';
+					echo $li;
+				}
 				?>
-			  <li id="slide-one" date-target="#myCarousel" date-slide-to="0" class="active"></li>
-			  <li id="slide-two" date-target="#myCarousel" date-slide-to="1"></li>
-			  <li id="slide-three" date-target="#myCarousel" date-slide-to="2"></li>
 			</ol>
 			<div class="carousel-inner">
 				<?php
-				// $sql = 'SELECT * FROM myindex';
-				// $result = mysqli_query($conn,$sql);
-				// while($row=mysqli_fetch_array($result)){
-				// 	$div = '<div class="item active" style="background:'.$row['carousel_color'].';">
-				// 	<img src="'.$row['carousel_img'].'" class="img-responsive center-block">
-				// 	</div>';
-				// 	echo $div;
-				// }
+				$sql = 'SELECT * FROM myindex';
+				$result = mysqli_query($conn,$sql);
+				while($row=mysqli_fetch_array($result)){
+					$div = '<div class="item active" id="mycar'.$row['no'].'" style="background:'.$row['carousel_color'].';">
+					<img src="'.$row['carousel_img'].'" class="img-responsive center-block">
+					</div>';
+					echo $div;
+				}
 				?>
-				<div class="item active" style="background:#243442;">
-					<img src="img/slide1.png" alt="第一张" class="img-responsive center-block">
-				</div>
-				<div class="item" style="background:#F5E5DD;">
-					<img src="img/slide2.png" alt="第二张" class="img-responsive center-block">
-				</div>
-				<div class="item" style="background:#DC292C;">
-					<img src="img/slide3.png" alt="第三张" class="img-responsive center-block">
-				</div>
-				
 			</div>
 			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left"></span>
@@ -65,22 +52,13 @@
 			pause:"no",
 		});
 		<?php
-		//$sql = 'SELECT * FROM myindex';
-		// $result = mysqli_query($conn,$sql);
-		// while($row=mysqli_fetch_array($result)){
-		// 	$fuc = '$("#slide-'.$row['no'].'").click(function(){$("#myCarousel").carousel('.$row['no'].');});';
-		// 	echo $fuc;
-		// }
+		$sql = 'SELECT * FROM myindex';
+		$result = mysqli_query($conn,$sql);
+		while($row=mysqli_fetch_array($result)){
+			$fuc = '$("#slide-'.$row['no'].'").click(function(){$("#myCarousel").carousel('.$row['no'].');});';
+			echo $fuc;
+		}
 		?>
-        $("#slide-one").click(function(){
-    		$("#myCarousel").carousel(0);
-        });
-        $("#slide-two").click(function(){
-            $("#myCarousel").carousel(1);
-        });
-        $("#slide-three").click(function(){
-            $("#myCarousel").carousel(2);
-        });
 	</script>
     <!-- Carousel end-->
 	<!-- Tab1 -->
@@ -206,5 +184,11 @@
 	<!-- footer -->
 	<?php require_once 'component/footer.php' ?>
 	<!-- footer end -->
+	<script type="text/javascript">
+		$(window).('onload',function(){
+		$('#slide-0').addClass('active');
+		$('#mycar0').addClass('active');
+		})
+	</script>
 </body>
 </html>
