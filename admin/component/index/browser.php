@@ -15,8 +15,7 @@
 </head>
 		<?php
 		require_once '../connect.php';
-		$key=$_GET["key"];
-		$sql="select * from news where title like '%$key%' or content like '%$key%' or date like '%$key%'";
+		$sql="SELECT * FROM myindex ORDER BY no ASC";
 		$result=mysqli_query($conn,$sql);
 		?>
 		<div class="layui-container">
@@ -27,42 +26,29 @@
 							<col width="60">
 						</colgroup>
 						<tr>
-							<td colspan="4" style="text-align: center">
+							<td colspan="6" style="text-align: center">
 								<a href="insert_win.php">
 									<button class="layui-btu layui-btn-radius layui-btn-primary layui-btn-lg" style="border: 0px; cursor: pointer">
-										<i class="layui-icon layui-icon-add-circle"></i>添加资讯
+										<i class="layui-icon layui-icon-add-circle"></i>添加轮播图
 									</button>
 								</a>
-							</td>
-							<td colspan="4" style="text-align: center">
-								<form name="query" method="get" action="">
-									<input class="layui-input" style="width: 360px;" placeholder="输入查询关键字，回车跳转" type="text" name="key"/>
-									<button class="layui-btn layui-btn-primary fly-search">
-										<i class="layui-icon layui-icon-search "></i>
-									</button>
-									<!--<i class="layui-icon layui-icon-search fly-search"></i>-->
-								</form>
 							</td>
 						</tr>
 						<tr>
 							<td style="text-align: center">编号</td>
 							<td style="text-align: center">图片地址</td>
-							<td style="text-align: center">标题</td>
-							<td style="text-align: center">内容</td>
-							<td style="text-align: center">时间</td>
-							<td style="text-align: center">热门</td>
+							<td style="text-align: center">图片</td>
+							<td style="text-align: center">背景颜色</td>
 							<td style="text-align: center">修改</td>
 							<td style="text-align: center">删除</td>
 						</tr>
 						<?php
 						while($row=mysqli_fetch_array($result)){
 							echo "<tr>";
-							echo "<td>".$row['no']."</td>";
-							echo "<td>".$row['image']."</td>";
-							echo "<td>".$row['title']."</td>";
-							echo "<td>".$row['content']."</td>";
-							echo "<td>".$row['date']."</td>";
-							echo "<td>".$row['hot']."</td>";
+							echo "<td align='center'>".$row['no']."</td>";
+							echo "<td align='center'>".$row['carousel_img']."</td>";
+							echo "<td align='center'><img src='../../../".$row['carousel_img']."' style='max-width: 450px;'></td>";
+							echo "<td align='center'><div style='height: 50px; width: 80px; background-color:".$row['carousel_color']."'></div></td>";
 							$no = $row['no'];
 							echo "<td style='text-align: center'>
 									<a href='update_win.php?no=$no'>

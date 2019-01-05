@@ -3,10 +3,10 @@
 $no=$_GET['no'];
 require_once '../connect.php';	
 //删除数据
-$sql="DELETE FROM `news` WHERE no='$no'";
+$sql="DELETE FROM myindex WHERE no='$no'";
 $result=mysqli_query($conn,$sql);
 ?>
 <script type="text/javascript">
 //没有错误自动跳转到browse.php文件
-window.location.href="browser.php?key="          
+window.location.href="browser.php"          
 </script>

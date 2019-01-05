@@ -2,14 +2,11 @@
 //新增
 require_once '../connect.php';
 $no=$_POST['no'];
-$image=$_POST['image'];
-$title=$_POST['title'];
-$content=$_POST['content'];
-$date=$_POST['date'];
-$hot=$_POST['hot'];
-$sql="INSERT INTO `news`(`no`, `image`, `title`, `content`, `date`, `hot`) VALUES ('$no','$image','$title','$content','$date','$hot')";
+$carousel_img=$_POST['carousel_img'];
+$carousel_color=$_POST['carousel_color'];
+$sql="INSERT INTO myindex VALUES ('$no','$carousel_img','$carousel_color')";
 $result=mysqli_query($conn,$sql);
 ?>
 <script type="text/javascript">
-	window.location.href="browser.php?key="          
+	window.location.href="browser.php"          
 </script>

@@ -8,7 +8,7 @@
 		<?php 
 		require_once '../connect.php';
 		$no=$_GET['no'];
-		$sql="select * from news where no='$no'";
+		$sql="SELECT * FROM myindex  WHERE no ='$no'";
 		$result=mysqli_query($conn,$sql) or die("数据查询失败");
 		$row=mysqli_fetch_assoc($result);
 		?>
@@ -23,34 +23,15 @@
 							</div>
 						</div>
 						<div class="layui-form-item">
-							<label class="layui-form-label">热门咨询</label>
-							<div class="layui-input-block">
-								<input type="radio" name="hot" value="yes" <?php if($row["hot"]=='yes') echo "checked" ?> title="YES">
-								<input type="radio" name="hot" value="no" <?php if($row["hot"]=='no') echo "checked" ?> title="NO">
-							</div>
-						</div>
-						<div class="layui-form-item">
 							<label class="layui-form-label">图片地址</label>
 							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="image" required lay-verify="required" value="<?php echo $row['image']?>">
+								<input class="layui-input" type="text" name="carousel_img" required lay-verify="required" value="<?php echo $row['carousel_img']?>">
 							</div>
 						</div>
 						<div class="layui-form-item">
-							<label class="layui-form-label">标题</label>
+							<label class="layui-form-label">背景颜色</label>
 							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="title" required lay-verify="required" value="<?php echo $row['title']?>">
-							</div>
-						</div>
-						<div class="layui-form-item">
-							<label class="layui-form-label">内容</label>
-							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="content" value="<?php echo $row['content']?>">
-							</div>
-						</div>
-						<div class="layui-form-item">
-							<label class="layui-form-label">日期</label>
-							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="date" value="<?php echo $row['date']?>">
+								<input class="layui-input" type="text" name="carousel_color" required lay-verify="required" value="<?php echo $row['carousel_color']?>">
 							</div>
 						</div>
 						<div class="layui-form-item">

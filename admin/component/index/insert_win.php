@@ -13,38 +13,19 @@
 						<div class="layui-form-item">
 							<label class="layui-form-label">编号</label>
 							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="no" required  lay-verify="required" placeholder="请输入编号">
+								<input class="layui-input" type="text" name="no" required lay-verify="required" placeholder="请输入编号">
 							</div>
 						</div>
 						<div class="layui-form-item">
-							<label class="layui-form-label">热门咨询</label>
+							<label class="layui-form-label">图片</label>
 							<div class="layui-input-block">
-								<input type="radio" name="hot" value="yes" title="YES">
-								<input type="radio" name="hot" value="no" title="NO" checked>
+								<input class="layui-input" type="text" name="carousel_img" id="carousel_img" required lay-verify="required" placeholder="填写图片绝对路径">
 							</div>
 						</div>
 						<div class="layui-form-item">
-							<label class="layui-form-label">图片地址</label>
+							<label class="layui-form-label">背景颜色</label>
 							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="image" required  lay-verify="required" placeholder="请输入图片地址">
-							</div>
-						</div>
-						<div class="layui-form-item">
-							<label class="layui-form-label">标题</label>
-							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="title" required  lay-verify="required" placeholder="请输入新闻标题名称">
-							</div>
-						</div>
-						<div class="layui-form-item">
-							<label class="layui-form-label">内容</label>
-							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="content" placeholder="请输入新闻内容">
-							</div>
-						</div>
-						<div class="layui-form-item">
-							<label class="layui-form-label">时间</label>
-							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="date" placeholder="请输入日期">
+								<input class="layui-input" type="text" name="carousel_color" required lay-verify="required" placeholder="图片填充背景">
 							</div>
 						</div>
 						<div class="layui-form-item">
@@ -61,8 +42,8 @@
 	<script>
 	//JavaScript代码区域
 	layui.use('element', function(){
-	  var element = layui.element;
-
+	 	var element = layui.element;
+	 	
 	});
 	</script>
 </html>
