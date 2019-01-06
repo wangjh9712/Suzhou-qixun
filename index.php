@@ -15,7 +15,7 @@
 	<!-- navigator end -->
 	<!-- Carousel -->
 	<div class="container-fluid" style="padding: 0; margin-top: 50px;">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" style="max-height: 440px;">
 			<ol class="carousel-indicators">
 				<?php
 				$sql = 'SELECT * FROM myindex ORDER BY no ASC';

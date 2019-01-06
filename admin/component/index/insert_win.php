@@ -24,10 +24,13 @@
 						</div>
 						<div class="layui-form-item">
 							<label class="layui-form-label">背景颜色</label>
-							<div class="layui-input-block">
-								<input class="layui-input" type="text" name="carousel_color" required lay-verify="required" placeholder="图片填充背景">
-							</div>
-						</div>
+						    <div class="layui-input-inline" style="width: 120px;">
+						        <input type="text" value="" placeholder="请选择颜色" class="layui-input" lay-verify="required" id="carousel_color" name="carousel_color" required>
+						    </div>
+						    <div class="layui-inline" style="left: -11px;">
+						        <div id="colorpicker"></div>
+						    </div>
+					    </div>
 						<div class="layui-form-item">
 							<div class="layui-input-block">
 								<button class="layui-btn layui-btn-primary" lay-submit lay-filter="formDemo">立即提交</button>
@@ -41,9 +44,19 @@
 	<script src="../../layui/layui.all.js"></script>
 	<script>
 	//JavaScript代码区域
-	layui.use('element', function(){
-	 	var element = layui.element;
-	 	
+	layui.use(['element','colorpicker'], function(){
+		var $ = layui.jquery;
+		var element = layui.element;
+		var colorpicker = layui.colorpicker;
+
+		colorpicker.render({
+			elem: '#colorpicker',
+			done: function(color){
+				$('#carousel_color').val(color);
+			}
+		});
+
 	});
+
 	</script>
 </html>
