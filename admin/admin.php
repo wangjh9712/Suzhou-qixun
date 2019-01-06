@@ -26,14 +26,14 @@
       <li class="layui-nav-item">
         <a href="javascript:;">
           <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-          贤心
+          Gang 4
         </a>
-        <dl class="layui-nav-child">
+<!--         <dl class="layui-nav-child">
           <dd><a href="">基本资料</a></dd>
           <dd><a href="">安全设置</a></dd>
-        </dl>
+        </dl> -->
       </li>
-      <li class="layui-nav-item"><a href="">登出</a></li>
+      <li class="layui-nav-item"><a href="/">登出</a></li>
     </ul>
   </div>
   
